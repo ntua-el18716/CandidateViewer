@@ -13,7 +13,8 @@ function ListOfCandidates({ candidates }) {
       );
       setFilteredCandidates(f);
     }
-  }, [candidates, filter]);
+    // }, [candidates, filter]);
+  }, []);
 
   // console.log(filteredCandidates);
   const sortedCandidates = filteredCandidates.sort((a, b) =>
