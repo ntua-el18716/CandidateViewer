@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 function ListOfCandidates({ candidates }) {
+  console.log(candidates);
   const [filteredCandidates, setFilteredCandidates] = useState(candidates);
   const [filter, setFilter] = useState("all");
   useEffect(() => {
@@ -13,8 +14,8 @@ function ListOfCandidates({ candidates }) {
       );
       setFilteredCandidates(f);
     }
-    // }, [candidates, filter]);
-  }, []);
+  }, [candidates, filter]);
+  // }, []);
 
   // console.log(filteredCandidates);
   const sortedCandidates = filteredCandidates.sort((a, b) =>
@@ -101,7 +102,6 @@ function ListOfCandidates({ candidates }) {
           </p>
           <img
             src={`/images/partyLogos/${candidate.candidateParty}.png`}
-            // src={`/images/partyLogos/diko.png`}
             alt="Your Image"
             style={{ maxHeight: "60px", width: "auto" }}
             loading="lazy"
