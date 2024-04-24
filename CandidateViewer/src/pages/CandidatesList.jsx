@@ -6,13 +6,13 @@ function CandidatesList() {
   const [candidates, setCandidates] = useState([]);
   //const [candidateId, setCandidateId] = useState(-1);
 
-  useEffect(() => {
-    async function fetchCandidates() {
-      const candidatesArray = await getCandidates();
-      setCandidates(candidatesArray);
-    }
-    fetchCandidates();
-  }, []);
+  // useEffect(() => {
+  //   async function fetchCandidates() {
+  //     const candidatesArray = await getCandidates();
+  //     setCandidates(candidatesArray);
+  //   }
+  //   fetchCandidates();
+  // }, []);
 
   setCandidates([
     {
